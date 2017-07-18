@@ -1,0 +1,19 @@
+{
+  "name": "citation-counter-electron",
+  "version": "1.0.0",
+  "description": "Count citations given a paper.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Supun Abeysinghe",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.13"
+  },
+  "dependencies": {
+    "bibtex-parser": "0.0.0",
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.81.0"
+  }
+}

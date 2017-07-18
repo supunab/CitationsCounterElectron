@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Citations Counter</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body class="container" ng-app="citations" ng-controller="mainController" ng-cloak>
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Citaion Counter</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-primary" ng-click="toggleInput()">URL/Local Toggle</button>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <input class="form-control" ng-hide="i%2" id='fileInput' type="file" accept=".bib">
+                <input class="form-control" ng-hide="(i+1)%2" type="text" ng-model="urlInput">
+            </div>
+        </div>
+        
+        <hr/>
+        <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-default" type="button" ng-click="retriveResults()">Get Results</button>
+            </div>
+
+            <div class="col-md-7">
+                <h3>{{citationCount}}</h3>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="mainWindow.js"></script>
+    </body>
+</html>
